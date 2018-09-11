@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:RtAudio.h">
+   </FileRef>
+   <FileRef
       location = "self:WallOfSound.xcodeproj">
    </FileRef>
 </Workspace>
