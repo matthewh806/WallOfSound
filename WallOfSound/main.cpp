@@ -15,10 +15,9 @@
 
 Oscillator myOsc;
 
-// TODO: Separate class !
 void play(double *output)
 {
-    output[0] = myOsc.sineWave(440, 0.25);
+    output[0] = myOsc.sineWave(220, 0.1);
     output[1] = output[0];
 }
 
@@ -54,11 +53,11 @@ int main(int argc, const char * argv[]) {
     
     RtAudio::StreamParameters parameters;
     parameters.deviceId = dac.getDefaultOutputDevice();
-    parameters.nChannels = 2;
+    parameters.nChannels = AudioSettings::channels;
     parameters.firstChannel = 0;
-    unsigned int sampleRate = 44100;
-    unsigned int bufferFrames = 265;
-    std::vector<double> data(2,0);
+    unsigned int sampleRate = AudioSettings::sampleRate;
+    unsigned int bufferFrames = AudioSettings::bufferSize;
+    std::vector<double> data(AudioSettings::channels,0);
     
     try {
         dac.openStream( &parameters, NULL, RTAUDIO_FLOAT64,
