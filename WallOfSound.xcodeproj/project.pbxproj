@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		340A7FF52148363700352E9E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 340A7FF42148363700352E9E /* main.cpp */; };
 		340A7FFD214837E100352E9E /* RtAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 340A7FFB214837E100352E9E /* RtAudio.cpp */; };
+		3458656B214D418D00496A95 /* Oscillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34586569214D418D00496A95 /* Oscillator.cpp */; };
+		34586590214D4A3B00496A95 /* Envelope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3458658E214D4A3B00496A95 /* Envelope.cpp */; };
+		34586593214D4C6900496A95 /* AudioSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34586591214D4C6900496A95 /* AudioSettings.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +31,12 @@
 		340A7FF42148363700352E9E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		340A7FFB214837E100352E9E /* RtAudio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RtAudio.cpp; sourceTree = "<group>"; };
 		340A7FFF214844A100352E9E /* RtAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtAudio.h; sourceTree = "<group>"; };
+		34586569214D418D00496A95 /* Oscillator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Oscillator.cpp; sourceTree = "<group>"; };
+		3458656A214D418D00496A95 /* Oscillator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Oscillator.hpp; sourceTree = "<group>"; };
+		3458658E214D4A3B00496A95 /* Envelope.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Envelope.cpp; sourceTree = "<group>"; };
+		3458658F214D4A3B00496A95 /* Envelope.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Envelope.hpp; sourceTree = "<group>"; };
+		34586591214D4C6900496A95 /* AudioSettings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AudioSettings.cpp; sourceTree = "<group>"; };
+		34586592214D4C6900496A95 /* AudioSettings.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AudioSettings.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +72,12 @@
 				340A7FF42148363700352E9E /* main.cpp */,
 				340A7FFB214837E100352E9E /* RtAudio.cpp */,
 				340A7FFF214844A100352E9E /* RtAudio.h */,
+				34586569214D418D00496A95 /* Oscillator.cpp */,
+				3458656A214D418D00496A95 /* Oscillator.hpp */,
+				3458658E214D4A3B00496A95 /* Envelope.cpp */,
+				3458658F214D4A3B00496A95 /* Envelope.hpp */,
+				34586591214D4C6900496A95 /* AudioSettings.cpp */,
+				34586592214D4C6900496A95 /* AudioSettings.hpp */,
 			);
 			path = WallOfSound;
 			sourceTree = "<group>";
@@ -125,6 +140,9 @@
 			files = (
 				340A7FFD214837E100352E9E /* RtAudio.cpp in Sources */,
 				340A7FF52148363700352E9E /* main.cpp in Sources */,
+				34586593214D4C6900496A95 /* AudioSettings.cpp in Sources */,
+				3458656B214D418D00496A95 /* Oscillator.cpp in Sources */,
+				34586590214D4A3B00496A95 /* Envelope.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
