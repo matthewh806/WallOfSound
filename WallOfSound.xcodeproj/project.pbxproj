@@ -12,6 +12,8 @@
 		3458656B214D418D00496A95 /* Oscillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34586569214D418D00496A95 /* Oscillator.cpp */; };
 		34586590214D4A3B00496A95 /* Envelope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3458658E214D4A3B00496A95 /* Envelope.cpp */; };
 		34586593214D4C6900496A95 /* AudioSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34586591214D4C6900496A95 /* AudioSettings.cpp */; };
+		34586596214E823900496A95 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34586595214E823900496A95 /* CoreAudio.framework */; };
+		34586598214E825400496A95 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34586597214E825400496A95 /* CoreFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +39,8 @@
 		3458658F214D4A3B00496A95 /* Envelope.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Envelope.hpp; sourceTree = "<group>"; };
 		34586591214D4C6900496A95 /* AudioSettings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AudioSettings.cpp; sourceTree = "<group>"; };
 		34586592214D4C6900496A95 /* AudioSettings.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AudioSettings.hpp; sourceTree = "<group>"; };
+		34586595214E823900496A95 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		34586597214E825400496A95 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34586598214E825400496A95 /* CoreFoundation.framework in Frameworks */,
+				34586596214E823900496A95 /* CoreAudio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +61,7 @@
 			children = (
 				340A7FF32148363600352E9E /* WallOfSound */,
 				340A7FF22148363600352E9E /* Products */,
+				34586594214E823900496A95 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +87,15 @@
 				34586592214D4C6900496A95 /* AudioSettings.hpp */,
 			);
 			path = WallOfSound;
+			sourceTree = "<group>";
+		};
+		34586594214E823900496A95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34586597214E825400496A95 /* CoreFoundation.framework */,
+				34586595214E823900496A95 /* CoreAudio.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,10 +206,6 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = __MACOSX_CORE__;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -265,10 +277,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
+					"_GLIBCXX_DEBUG=1",
+					"_GLIBCXX_DEBUG_PEDANTIC=1",
 				);
-				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = __MACOSX_CORE__;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -277,7 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				GCC_PREPROCESSOR_DEFINITIONS = __MACOSX_CORE__;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = __MACOSX_CORE__;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
