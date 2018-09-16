@@ -30,9 +30,8 @@ double Envelope::attackRelease(double input, double attack, double release, long
     
     if(attackPhase == 1)
     {
-        amplitude += attack;
+        amplitude += (1*attack);
         output = input * amplitude;
-        
     }
     
     if(amplitude >= 1) {

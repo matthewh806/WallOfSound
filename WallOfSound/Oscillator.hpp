@@ -22,7 +22,8 @@ public:
     Oscillator();
     ~Oscillator();
     
-    double sineWave(double frequency, double amplitude);
+    double sineWave(double frequency);
+    double phasor(double frequency);
     
 private:
     float increment;

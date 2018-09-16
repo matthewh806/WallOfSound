@@ -29,7 +29,7 @@ Oscillator::~Oscillator()
     // TODO: Cleanup    
 }
 
-double Oscillator::sineWave(double frequency, double amplitude)
+double Oscillator::sineWave(double frequency)
 {
     // phase index = mod_L ( previous_phase + increment) L = length
     // output = amplitude * wavetable[phase_index]
@@ -42,12 +42,20 @@ double Oscillator::sineWave(double frequency, double amplitude)
     auto value1 = waveTable[index1];
     auto t = phase - (float)index0;
     
-    auto output = amplitude * ((1-t) * value0 + t * value1);
-    
     // TODO: This only neds to be calculatd when sampleRate or frequency change.
     increment = (AudioSettings::bufferSize * frequency) / AudioSettings::sampleRate;
     phase = fmod(phase + increment, AudioSettings::bufferSize);
     
+    return ((1-t) * value0 + t * value1);
+}
+
+double Oscillator::phasor(double frequency)
+{
+    auto output = phase;
+    
+    if(phase >= 1.0) phase -= 1.0;
+    
+    phase += (1 / (AudioSettings::sampleRate / frequency));
     return output;
 }
 

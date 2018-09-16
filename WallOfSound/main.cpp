@@ -13,11 +13,24 @@
 #include "Envelope.hpp"
 #include "AudioSettings.hpp"
 
-Oscillator myOsc;
+Oscillator myOsc, counter;
+Envelope myEnv;
+
+int currentCount;
+
+void setup()
+{
+    
+}
 
 void play(double *output)
 {
-    output[0] = myOsc.sineWave(220, 0.1);
+    double curVol = myEnv.attackRelease(0.25, 1, 0.9999, 1, myEnv.trigger);
+    
+    currentCount = counter.phasor(1);
+    myEnv.trigger = (currentCount == 1) ? 1 : 0;
+    
+    output[0] = curVol * myOsc.sineWave(440);
     output[1] = output[0];
 }
 
@@ -44,6 +57,7 @@ int routing(void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames,
 //==============================================================================
 
 int main(int argc, const char * argv[]) {
+    setup();
     
     RtAudio dac(RtAudio::MACOSX_CORE);
     if(dac.getDeviceCount() < 1) {
