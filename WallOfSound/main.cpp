@@ -11,24 +11,26 @@
 #include "RtAudio.h"
 #include "Oscillator.hpp"
 #include "Envelope.hpp"
+#include "Clock.hpp"
 #include "AudioSettings.hpp"
 
-Oscillator myOsc, counter;
+Oscillator myOsc;
+Clock myClock;
 Envelope myEnv;
 
 int currentCount;
 
 void setup()
 {
-    
+    myClock.setTicksPerBeat(1);
+    myClock.setTempo(120);
 }
 
 void play(double *output)
 {
+    myClock.ticker();
+    myEnv.trigger = (myClock.tick) ? 1 : 0;
     double curVol = myEnv.attackRelease(0.25, 1, 0.9999, 1, myEnv.trigger);
-    
-    currentCount = counter.phasor(1);
-    myEnv.trigger = (currentCount == 1) ? 1 : 0;
     
     output[0] = curVol * myOsc.sineWave(440);
     output[1] = output[0];

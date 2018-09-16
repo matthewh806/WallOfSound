@@ -14,6 +14,7 @@
 		34586593214D4C6900496A95 /* AudioSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34586591214D4C6900496A95 /* AudioSettings.cpp */; };
 		34586596214E823900496A95 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34586595214E823900496A95 /* CoreAudio.framework */; };
 		34586598214E825400496A95 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34586597214E825400496A95 /* CoreFoundation.framework */; };
+		3458659B214E8D2C00496A95 /* Clock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34586599214E8D2C00496A95 /* Clock.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,8 @@
 		34586592214D4C6900496A95 /* AudioSettings.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AudioSettings.hpp; sourceTree = "<group>"; };
 		34586595214E823900496A95 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		34586597214E825400496A95 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		34586599214E8D2C00496A95 /* Clock.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Clock.cpp; sourceTree = "<group>"; };
+		3458659A214E8D2C00496A95 /* Clock.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Clock.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				3458658F214D4A3B00496A95 /* Envelope.hpp */,
 				34586591214D4C6900496A95 /* AudioSettings.cpp */,
 				34586592214D4C6900496A95 /* AudioSettings.hpp */,
+				34586599214E8D2C00496A95 /* Clock.cpp */,
+				3458659A214E8D2C00496A95 /* Clock.hpp */,
 			);
 			path = WallOfSound;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				340A7FF52148363700352E9E /* main.cpp in Sources */,
 				34586593214D4C6900496A95 /* AudioSettings.cpp in Sources */,
 				3458656B214D418D00496A95 /* Oscillator.cpp in Sources */,
+				3458659B214E8D2C00496A95 /* Clock.cpp in Sources */,
 				34586590214D4A3B00496A95 /* Envelope.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
